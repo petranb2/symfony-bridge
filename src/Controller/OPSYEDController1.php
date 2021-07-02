@@ -1,10 +1,9 @@
 <?php
-// src/Controller/BlogController.php
+// src/Controller/OPSYEDController1.php
 namespace App\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\DependencyInjection\ContainerInterface;
-use App\Service\ServiceFactory;
 use Exception;
 
 class OPSYEDController1 extends AbstractController
@@ -14,7 +13,6 @@ class OPSYEDController1 extends AbstractController
     public function __construct(ContainerInterface $container)
     {
         $this->con = $container;
-        $this->get("test");
     }
     /**
      * Bridge function to by-pass the symfony 4.4 restrictions
@@ -22,10 +20,10 @@ class OPSYEDController1 extends AbstractController
      * @param serviceId the serviceId we want to get
      * @return service the new service object from the service container
      */
-    // protected function get(string $serviceId): object
-    // {
-    //     return $this->getService($serviceId);
-    // }
+    protected function get(string $serviceId): object
+    {
+        return $this->getService($serviceId);
+    }
 
     private function getService($alias)
     {

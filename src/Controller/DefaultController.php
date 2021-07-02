@@ -1,15 +1,15 @@
 <?php
-// src/Controller/BlogController.php
+// src/Controller/DefaultController.php
 namespace App\Controller;
 
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 
-class DefaultController extends OPSYEDController1
+class DefaultController extends OPSYEDController2
 {
 
     /**
-     * @Route("/home", name="blog_list", methods={"GET"})
+     * @Route("/home", name="home_route", methods={"GET"})
      */
     public function list(): Response
     {
